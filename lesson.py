@@ -11,11 +11,10 @@ driver = webdriver.Chrome(executable_path='/Users/macbook/AquaProjects/pytest_se
 driver.get('https://www.saucedemo.com/')
 driver.maximize_window()
 #user_name = driver.find_element(By.ID, "user-name") #ID
-user_name = driver.find_element(By.NAME, "user-name") #NAME
+#user_name = driver.find_element(By.NAME, "user-name") #NAME
+#user_name = driver.find_element(By.XPATH, '//*[@id="user-name"]') # full XPATH
+#user_name = driver.find_element(By.XPATH, '//input[@id="user-name"]') #id XPATH
+user_name = driver.find_element(By.XPATH, "//input[@data-test='username']") #data-test XPATH
 user_name.send_keys("standard_user")
 
 
-
-
-#time.sleep(5)
-#driver.close()
