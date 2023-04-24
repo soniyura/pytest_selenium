@@ -16,6 +16,7 @@ driver.maximize_window()
 #user_name = driver.find_element(By.NAME, "user-name") #NAME
 #user_name = driver.find_element(By.XPATH, '//*[@id="user-name"]') # full XPATH
 #user_name = driver.find_element(By.XPATH, '//input[@id="user-name"]') #id XPATH
+
 #обираю поле логіна за допомогою XPATH
 user_name = driver.find_element(By.XPATH, "//input[@data-test='username']") #data-test XPATH
 #вставляємо значення в поле
