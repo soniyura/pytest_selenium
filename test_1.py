@@ -1,3 +1,5 @@
+import datetime
+import time
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -41,6 +43,13 @@ print(get_url)
 
 assert url == get_url
 print("good url")
+time.sleep(3)
+#додаєємо час коли був зроблений скрін
+now_data = datetime.datetime.utcnow().strftime("%Y.%m.%d.%H.%M.%S")
+#вставляємо дату та час в неймінг скріна
+name_screenshot = 'screenshot' + now_data + '.png'
+#робить скрін
+driver.save_screenshot('/Users/macbook/AquaProjects/pytest_selenium/screen/' + name_screenshot)
 
 
 
